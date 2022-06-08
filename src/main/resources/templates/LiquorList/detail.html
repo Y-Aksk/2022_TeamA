@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    </head>
+    <body>
+        <img src="${item.product_image}">写真
+        <table>
+            <tr th:each="item : ${page.list}" >
+    
+            <table>    
+                <td th:text="${item.product_name}">名前</td>
+                <td> </td>
+                <td th:text="${item.abv}">度数</td>
+                <td>%</td>
+                <td> </td>
+                <td th:text="${item.volume}">量</td>
+                <td>㎖</td>
+                
+
+            </table>    
+            <table>             
+                <tr th:text="${item.product_price}">値段</tr>
+                <tr>円</tr></table>
+   
+               
+                <td th:text="${item.product_detail}">詳細</td>
+                
+               
+               
+                
+            </tr>
+        </table>  
+        <table>
+                <td><form action="/LiquorList/cart" method="post">
+                    <button type="submit">カートに入れる</button>
+                </form></td>
+    
+                <td><form action="/LiquorList/favorite" method="post">
+                    <button type="submit">お気に入り</button>
+                </form></td>
+    
+                <td><form action="/LiquorList/buy" method="post">
+                    <button type="submit">購入</button>
+                </form></td>
+        </table>
+            
+    </body>
+</html>

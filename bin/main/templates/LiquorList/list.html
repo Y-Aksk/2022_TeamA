@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商品一覧</title>
+</head>
+<body>
+  
+ 
+    <a href="./templates/LiquorList/detail.html"><img src="/image/brandy/CAMUS_IA_VSOP.jpg" alt="商品情報" width="60" height="60"></a>
+
+    <form action="/LiquorList/search" method="post">
+        <h4>商品検索</h4>
+        <input type="text" id="name" name="name" th:value="${name}">
+        <button type="submit">検索</button>
+
+
+    <table>
+        <tr th:each="item : ${page.list}" >
+
+            <td><img th:src="${item.product_image}" width="60" height="60"></td>
+            <!-- <td><a th:href="@{'/LiquorList/detail/{id}'(id=${item.customer_id})}" href="#"><img th:src="${item.product_image}">写真</a></td>  -->
+            <td th:text="${item.product_name}">名前</td></a>
+            <td th:text="${item.product_price}">値段</td>
+            <td>円</td>
+            <td th:text="${item.abv}">度数</td>
+            <td>%</td>
+            <td th:text="${item.volume}">量</td> 
+            <td>㎖</td>
+
+            <td><form action="/LiquorList/cart" method="post">
+                <button type="submit">カートに入れる</button>
+            </form></td>
+
+            <td><form action="/LiquorList/favorite" method="post">
+                <button type="submit">お気に入り</button>
+            </form></td>
+
+            <td><form action="/LiquorList/buy" method="post">
+                <button type="submit">購入</button>
+            </form></td>
+        
+        </tr>
+    </table>
+</body>
+</html>
