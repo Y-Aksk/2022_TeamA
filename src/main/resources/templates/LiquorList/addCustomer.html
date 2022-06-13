@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>新規登録画面</title>
+            <meta charset="UTF-8">
+            <link rel="stylesheet" type="text/css" href="/CSS/forLogin.css">
+            <!-- <script language="javascript" type="text/javascript">
+                function onButtonClick() {
+                    var val1 = document.forms.form1.pass1.value;
+                    var val2 = document.forms.form1.pass2.value;
+                    var target = document.getElementById("output");
+        
+                    if (val1 == val2) {
+                        target.innerHTML = "";
+                    } else {
+                        target.innerHTML = "パスワードが一致しません";
+                    }
+                }
+            </script> -->
+        </head>
+        <body>
+            <h1>新規登録</h1>
+            <p>必要事項を入力してください</p>
+            <p th:text="${massage}"></p>
+            <form action="/LiquorList/addCustomer" th:action="@{'/LiquorList/addCustomer'}" method="post">
+                <table border="1">
+                        <tr>
+                            <td><p>名前　　　　　　　<input type="text" name="customer_name" placeholder="酒豪太郎"></p></td>
+                        </tr>
+                        <tr>
+                            <td><p>メールアドレス　　<input type="mailaddress" name="mailaddress" placeholder="sample@example.jp"></p></td>
+                        </tr>
+                        <tr>
+                            <td><p>パスワード　　　　<input type="password" name="password" placeholder="example2022" ></p></td>
+                        </tr>
+                        <tr>
+                            <td><p>パスワード再入力　<input type="password" name="password2" placeholder="example2022" ></p></td>
+                        </tr>
+                </table>
+                <!-- <p><input type="submit" name="button" value="登録" onclick="onButtonClick();"></p> -->
+                <button type="submit">登録</button>
+            </form>
+
+            <form action="/LiquorList/addCustomer2" th:action="@{'/LiquorList/addCustomer2'}" method="post">
+                
+                <button type="submit">登録2</button>
+            </form>
+
+            <p><a th:href="@{'/LiquorList/loginDisplay'}">アカウントをお持ちの方はこちら</a></p>
+        </body>
+    </html>
+
+    
+    
