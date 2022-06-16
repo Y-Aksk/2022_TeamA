@@ -49,17 +49,17 @@ public class LoginAddPageModel {
         this.password2=password2;
     }
 
-    public String setAdd_user(){
+    public String getAdd_user(){
         return add_user;
     }
-    public void getAdd_user(String add_user){
+    public void setAdd_user(String add_user){
         this.add_user=add_user;
     }
 
-    public String setChange_user(){
+    public String getChange_user(){
         return change_user;
     }
-    public void getChange_user(String change_user){
+    public void setChange_user(String change_user){
         this.change_user=change_user;
     }
 }

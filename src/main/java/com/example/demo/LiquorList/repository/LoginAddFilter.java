@@ -16,6 +16,10 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Component;
 
+import com.example.demo.LiquorList.controller.LoginAddController;
+
+
+
 @Component
 public class LoginAddFilter implements Filter {
 
@@ -24,7 +28,14 @@ public class LoginAddFilter implements Filter {
         System.out.println("init!!");
         //☆☆ここにログインしていなくても開けるページ☆☆
         urls.add("^/LiquorList/loginDisplay");
+        urls.add("^/LiquorList/login");
         urls.add("^/LiquorList/addCustomerDisplay");
+        urls.add("^/LiquorList/addCustomer");
+
+        //開発のために一時的にオープンするページ
+        // urls.add("^/LiquorList/myPageDisplay");
+
+        //テスト用のトップページです
         urls.add("^/LiquorList/topForTest");
     }
 
@@ -51,8 +62,6 @@ public class LoginAddFilter implements Filter {
                 //ログイン画面に戻す処理
                 if (url == null) {
                     response.sendRedirect("LiquorList/loginDisplay");
-                //セッション無しで移動できるページの指定と処理
-                // } else if (url.matches("^/LiquorList/loginDisplay") || url.matches("^/LiquorList/addCustomerDisplay")  || url.equals("^/LiquorList/topForTest") || url.matches("^/search") || url.matches("^/search/s") || url.matches("^/forget") || url.matches("^/forget/edit") || url.matches("^/newcreate") || url.matches("^/top") || url.matches("^/faq")|| url.matches("^/forget")|| url.matches("^/newcreate/newcheck")|| url.matches("^/newcreate/login")|| url.matches("^/newcreate/newcreate") || url.matches("^/AboutUs") || url.matches("^/newcreate/newcomplete")) {
                 } else if (checkURL(url)) {
                     chain.doFilter(request, response);
                 //フィルターをかけない拡張子の指定

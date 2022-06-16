@@ -5,5 +5,5 @@ public class LoginAddModel {
     public String customer_name;
     public String mailaddress;
     public String password;
-    public String password2;
+    // public String password2;
 }

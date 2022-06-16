@@ -1,15 +1,19 @@
-<DOCTYPE html>
+<!DOCTYPE html>
     <html>
         <head>
             <title>トップ</title>
             <meta charset="UTF-8">
             <link rel="stylesheet" type="text/css" href="/CSS/forLogin.css">
-            <body>
-                <h1>トップ</h1>
-                <p>テスト用です</p>
-                <div class="top_login"><p><a th:href="@{'/LiquorList/loginDisplay'}">ログイン</a></p></div>
-                <div class="top_add"><p><a th:href="@{'/LiquorList/addCustomerDisplay'}">新規登録</a></p></div>
-            </body>
+        </head>
+        <body>
+            <a th:text="${customer_name}"></a>
+            <h1>トップ</h1>
+            <p>テスト用です</p>
+            <div class="top_login"><p><a th:href="@{'/LiquorList/loginDisplay'}">ログイン</a></p></div>
+            <!-- <div class="top_logout"><p><a th:href="@{'/LiquorList/loginout'}">ログアウト</a></p></div> -->
+            <div class="top_add"><p><a th:href="@{'/LiquorList/addCustomerDisplay'}">新規登録</a></p></div>
+            <div class="top_mypage"><p><a th:href="@{'/LiquorList/myPageDisplay'}">マイページ</a></p></div>
+        </body>
         </head>
     </html>
 </DOCTYPE>
