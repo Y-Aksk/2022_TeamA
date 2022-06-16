@@ -11,6 +11,9 @@ public class LiquorModel {
     public int product_price;
     public double abv;
     public int volume;
+    public String product_detail;
+    public int count;
+    
   
     
 }

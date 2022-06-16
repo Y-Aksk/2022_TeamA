@@ -2,6 +2,7 @@ package com.example.demo.LiquorList.model;
 
 import java.util.List;
 
+import com.example.demo.LiquorList.repository.FavoriteModel;
 import com.example.demo.LiquorList.repository.LiquorModel;
 
 
@@ -19,6 +20,7 @@ public class LiquorPageModel {
      * 顧客一覧
      */
     public List<LiquorModel> list;
+    public List<FavoriteModel>list2;
 
     public int product_id;
     public int category_id;
@@ -28,6 +30,7 @@ public class LiquorPageModel {
     public double abv;
     public int volume;
     public String product_detail;
+    public int count;
     
 
     public int getProduct_id(){
@@ -78,6 +81,12 @@ public class LiquorPageModel {
     }
     public void setProduct_detail(String product_detail){
         this.product_detail =product_detail;
+    }
+    public int getCount(){
+        return count;
+    }
+    public void setCount(int count){
+        this.count = count;
     }
 
 

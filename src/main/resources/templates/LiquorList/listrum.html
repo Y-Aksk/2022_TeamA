@@ -14,7 +14,7 @@
       <nav>
         <ul>
 
-          <li><a href="/LiquorList/top">Top</a></li>
+          <li><a href="/LiquorList/list">商品一覧</a></li>
           <li><a href="/LiquorList/cart"><img src="/image/カート.png" width="30" height="30"></a></li>
           <li><a href="/LiquorList/favorite"><img src="/image/お気に入り.png" width="30" height="30"></a></li>
           <li><a href="#"><img src="/image/my.png " width="30" height="30"></a></li>
@@ -58,18 +58,19 @@
 
             <td th:hidden="${item.product_detail}">詳細</td>
 
-        
+ 
             <td><a th:href ="@{'/LiquorList/insertcart/{id}'(id=${item.product_id})}">
                 <button type="submit">カートに入れる</button>
-            </a></td>
+            </form></td>
 
             <td><a th:href ="@{'/LiquorList/insertfavorite/{id}'(id=${item.product_id})}">
                 <button type="submit">お気に入り</button>
-            </a></td>
+         </a></td>
 
-            <td><form action="/LiquorList/history" method="post">
+            <td><form action="/LiquorList/buy" method="post">
                 <button type="submit">購入</button>
             </form></td>
+        
         
         </tr>
     </table>

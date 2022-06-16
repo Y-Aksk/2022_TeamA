@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>LiquorShop</title>
+        <link rel="stylesheet" type="text/css" href="/CSS/list.css">
+        
+    </head>
+    <header id="header">
+        <div class="wrapper">
+          <p class="logo"><a href="/LiquorList/top"><img src="/image/お気に入り.jpg" width="200" height="100"></a></p>
+    
+          <nav>
+            <ul>
+    
+              <li><a href="/LiquorList/list">商品一覧</a></li>
+              <li><a href="/LiquorList/cart"><img src="/image/カート.png" width="30" height="30"></a></li>
+              <li><a href="/LiquorList/favorite"><img src="/image/お気に入り.png" width="30" height="30"></a></li>
+              <li><a href="#"><img src="/image/my.png " width="30" height="30"></a></li>
+              <li><a href="#">ログイン</a></li>
+            </ul>
+          </nav>
+          
+            <form action="/LiquorList/search" method="post">
+                <h1></h1>
+                  <input type="text" id="name" name="name" th:value="${name}">
+                  <button type="submit">検索</button></form>
+    
+    
+        </div>
+    </header>
+
+<body>
+        <h2 th:text="${page.title}">お気に入り</h2>
+            
+    <table align="center"> 
+        <table>
+            <tr th:each="item : ${page.list}">     
+                <td th:hidden ="${item.customer_id}"></td>
+                <td>
+                    <a  th:href = "@{'/LiquorList/detail/{id}'(id=${item.product_id})}" href="#">
+                    <img th:src="${item.product_image}" width="150" height="150">
+                    </a>
+                </td>
+            <table>
+                <td>
+                    <a  th:href = "@{'/LiquorList/detail/{id}'(id=${item.product_id})}" href="#">
+                    <span th:text = "${item.product_name}" >名前</span>   
+                    </a>
+                </td>
+            </table>
+            <table>
+                <td>                
+                    <a th:href="@{'/LiquorList/deletefavorite/{productId}'(productId=${item.product_id})}" href="#">
+                        削除
+                    </a>
+                </td>
+            </table>
+            </tr>
+        </table> 
+    </table>
+    
+        
+        
+    </body>
+    </html>

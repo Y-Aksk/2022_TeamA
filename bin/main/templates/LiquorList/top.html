@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Top</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="/CSS/list.css">
+</head>
+<header id="header">
+    <div class="wrapper">
+      <p class="logo"><a href="/LiquorList/top"><img src="/image/unnamed.jpg" width="300" height="80"></a></p>
+
+      <nav>
+        <ul>
+          <li><form action="/LiquorList/search" method="post">
+              <input type="text" id="name" name="name" th:value="${name}">
+              <button type="submit">検索</button></form></li>
+
+          <li><a href="/LiquorList/list">商品一覧</a></li>
+          <li><a href="/LiquorList/cart"><img src="/image/カート.png" width="30" height="30"></a></li>
+          <li><a href="/LiquorList/favorite"><img src="/image/お気に入り.png" width="30" height="30"></a></li>
+          <li><a href="#"><img src="/image/my.png " width="30" height="30"></a></li>
+          <li><a href="#">ログイン</a></li>
+        </ul>
+      </nav>
+ 
+      <nav class="liquor">
+        <ul>
+
+          <li><a href="/LiquorList/listwhisky" class="btn-border">　whisky　</a></li>
+          <li><a href="/LiquorList/listrum" class="btn-border">　rum　</a></li>
+          <li><a href="/LiquorList/listgin" class="btn-border">　gin　</a></li>
+          <li><a href="/LiquorList/listbrandy" class="btn-border">　brandy　</a></li>
+
+        </ul>
+      </nav>
+      
+
+
+
+    </div>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+<script type="text/javascript">
+        $(document).ready(function(){
+            $('.slider').bxSlider({
+                auto: true,
+                pause: 5000,
+            });
+        });
+</script>
+
+  </header>
+  <body>
+    <div>
+      <ul class="slider">
+        <li class="slider-item slider-item01"></li>
+        <li class="slider-item slider-item02"></li>
+        <li class="slider-item slider-item03"></li>
+      </ul>
+    </div>
+
+
+        <div class="PRODUCT">
+          <h1 align="center">PRODUCT</h1>
+        </div>
+
+
+      <table align="center">
+        <td>
+      <a href="listwhisky">
+        <div class="whiskeyimage">
+           <img src="/image/whisky/u.jpg" width="220" height="170" alt="">
+        </div>
+        <p></p>
+      </a>
+      </td>
+      <td>
+          <a href="listgin">
+            <div class="ginimage">
+               <img src="/image/gin/u.jpg" width="220" height="170" alt="">
+            </div>
+            <p></p>
+          </a>
+      </td>
+        
+        <td>
+          <a href="listrum">
+            <div class="rumimage">
+               <img src="/image/rum/u.jpg" width="220" height="170" alt="">
+            </div>
+          </a>
+        </td>
+    
+      <td>  
+      <a href="listbrandy">
+        <div class="brandyimage">
+           <img src="/image/brandy/u.jpg" width="220" height="170" alt="">
+        </div>
+
+      </a>
+    </td>
+   
+
+  </body>
+  <footer>
+    <div>
+      <h1>
+        <a href="top">SOL-liquor</a>
+      </h1>
+  
+      <div>
+        <small>Copyright &copy; 2022 SOL-liquor　｜ All rights reserved.</small>
+      </div>
+    </div>
+  </footer> 
+  </html>
