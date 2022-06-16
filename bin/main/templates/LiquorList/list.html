@@ -41,6 +41,7 @@
 
     </div>
 <body>
+    
 
     <table align="center">
         <tr th:each="item : ${page.list}" >
@@ -60,10 +61,10 @@
             <td th:text="${item.abv}">度数</td>
             <td>% 　</td>
             <td th:text="${item.volume}">量</td> 
-            <td>㎖ </td>
+            <td>㎖　</td>
         
             <td th:text="${item.product_price}"円>値段</td>
-            <td>円  </td>
+            <td>円　 </td>
 
 
             <td th:hidden="${item.product_detail}">詳細</td>
@@ -73,9 +74,10 @@
                 <button type="submit">カートに入れる</button>
             </a></td>
 
-            <td><a th:href ="@{'/LiquorList/insertfavorite/{id}'(id=${item.product_id})}">
+            <td><a th:href ="@{'/LiquorList/insertfavorite'}"> 
                 <button type="submit">お気に入り</button>
             </a></td>
+            
 
             <td><form action="/LiquorList/history" method="post">
                 <button type="submit">購入</button>
@@ -83,5 +85,6 @@
         
         </tr>
     </table>
+   
 </body>
 </html>

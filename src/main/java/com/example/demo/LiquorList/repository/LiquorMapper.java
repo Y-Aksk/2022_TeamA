@@ -32,7 +32,7 @@ public interface LiquorMapper {
     public LiquorModel findone(int id);
 
     //カート
-    @Insert("insert into cart (customer_id, product_id, count, product_price) VAlUES(2, #{product_id}, 1, #{product_price})")
+    @Insert("insert into cart (customer_id, product_id, count, product_price) VAlUES(#{customer_id}, #{product_id}, 1, #{product_price})")
     public void insertcart(
         @Param("product_id")int product_id,
         @Param("product_price")int product_price,
@@ -43,9 +43,10 @@ public interface LiquorMapper {
     public int findprice(int id);
 
 
-     @Insert("insert into favorite (customer_id, product_id) VAlUES(1, #{product_id})")
+     @Insert("insert into favorite (customer_id, product_id) VAlUES(#{customer_id}, #{product_id})")
      public void insertfavorite(
-         @Param("product_id")int product_id
+         @Param("product_id")int product_id,
+         @Param("customer_id")int customer_id
 
      );
 

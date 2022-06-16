@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>ログイン画面</title>
+            <meta charset="UTF-8">
+            <link rel="stylesheet" type="text/css" href="/CSS/forLogin.css">
+        </head>
+        <body>
+            <h1>ログイン画面</h1>
+            <p>メールアドレスとパスワードを入力してください。</p>
+            <p class="error" th:text="${massage}"></p>
+            <form action="/LiquorList/login" th:action="@{'/LiquorList/login'}" method="post">
+                <table border="1">
+                    <tr>
+                        <td>
+                            <p>メールアドレス　<input type="mailaddress" name="mailaddress" placeholder="sample@example.jp"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>パスワード　　　<input type="password" name="password" placeholder="example2022"></p>
+                        </td>
+                    </tr>
+                </table>
+                <p><input type="submit" name="button" value="ログイン"></p>
+            </form>
+
+            <p><a href="test.html">パスワードをお忘れの方はこちら</a></p>
+            <p><a th:href="@{'/LiquorList/addCustomerDisplay'}">アカウントをお持ちでない方はこちら</a></p>
+            <p><a th:href="@{'/LiquorList/topForTest'}">トップへ戻る</a></p>
+        </body>
+    </html>
+</DOCTYPE>
+    
+    
+    

@@ -1,0 +1,34 @@
+<DOCTYPE html>
+    <html>
+        <head>
+            <title>マイページ</title>
+            <meta charset="UTF-8">
+            <link rel="stylesheet" type="text/css" href="/CSS/forLogin.css">
+            <body>
+                <h1>マイページ</h1>
+                <p>現在登録されている情報</p>
+                <table border="1">
+                    <tr>
+                        <td><p>会員ID</p></td>
+                        <td th:text="${customer_id}">会員IDの表示エラー</td>
+                    </tr>
+                    <tr>
+                        <td><p>名前</p></td>
+                        <td th:text="${customer_name}">名前の表示エラー</td>
+                    </tr>
+                    <tr>
+                        <td><p>メールアドレス</p></td>
+                        <td th:text="${mailaddress}">メールアドレスの表示エラー</td></td>
+                    </tr>
+                </table>
+                <p>
+                    <input type="submit" name="botton" value="登録情報変更">
+                    <input type="submit" name="botton" location.href="edit.html" value="購入履歴">
+                    <p><a th:href="@{'/LiquorList/topForTest'}">トップへ戻る</a></p>
+                </p>
+            </body>
+        </head>
+    </html>
+    
+    
+    

@@ -1,5 +1,7 @@
 package com.example.demo.LiquorList.controller;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -19,6 +21,8 @@ import com.example.demo.LiquorList.repository.LiquorModel;
 @Controller
 @RequestMapping("LiquorList")
 public class LiquorController {
+    @Autowired
+    HttpSession session;
 
     @Autowired
     LiquorMapper liquorMapper;
@@ -157,17 +161,19 @@ public class LiquorController {
 
     }
         //お気に入りボタン
-    @GetMapping("insertfavorite/{id}")
-        public String insertfavorite(@ModelAttribute LiquorPageModel page, @PathVariable("id") int id, Model model) {
+    @GetMapping("insertfavorite")
+        public String insertfavorite(@ModelAttribute LiquorPageModel page, Model model) {
+
+        int customer_id=(int)session.getAttribute("customer_id");
         //更新データをパラメータに設定
-        liquorMapper.insertfavorite(id);
+        liquorMapper.insertfavorite(page.product_id, customer_id);
         //更新後データを取得
         // page.list2 = favoriteMapper.findFavo(id);
         page.list = liquorMapper.findall();
         //モデルページインスタンスを設定
         model.addAttribute("page", page);
         //テンプレートファイルをを指定
-        return "LiquorList/list";
+        return "LiquorList/favorite";
 
     }
 

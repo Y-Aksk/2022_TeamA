@@ -97,21 +97,23 @@ public class FavoriteController {
     HttpSession session; 
 
     //テスト用セッション
-    @GetMapping("favorite/{id}")
-    public String favorite(@PathVariable("id") int id, Model model){
+    @GetMapping("favorite")
+    public String favorite( Model model){
 
         //ページクラスをNewしてタイトルをセット
         FavoritePageModel page = new FavoritePageModel();
 
         //セッションの中にid（customer_idという名前の）
-        session.setAttribute("customer_id",id);
+        //session.setAttribute("customer_id",id);
+        int customer_id=(int)session.getAttribute("customer_id");
+
 
         page.title = "お気に入り";
 
         //モデルにページインスタンスを作成
         model.addAttribute("page",page);
         //更新後のデータを取得
-        page.list = favoriteMapper.findFavo(id);
+        page.list = favoriteMapper.findFavo(customer_id);
 
         return "LiquorList/favorite"; //テンプレートファイルを指定
 
