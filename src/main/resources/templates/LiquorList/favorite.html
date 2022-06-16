@@ -10,10 +10,13 @@
     </head>
     <header id="header">
         <div class="wrapper">
-          <p class="logo"><a href="/LiquorList/top"><img src="/image/お気に入り.jpg" width="200" height="100"></a></p>
+          <p class="logo"><a href="/LiquorList/top"><img src="/image/unnamed.jpg" width="300" height="80"></a></p>
     
           <nav>
             <ul>
+              <li><form action="/LiquorList/search" method="post">
+                  <input type="text" id="name" name="name" th:value="${name}">
+                  <button type="submit">検索</button></form></li>
     
               <li><a href="/LiquorList/list">商品一覧</a></li>
               <li><a href="/LiquorList/cart"><img src="/image/カート.png" width="30" height="30"></a></li>
@@ -22,11 +25,19 @@
               <li><a href="#">ログイン</a></li>
             </ul>
           </nav>
+     
+          <nav class="liquor">
+            <ul>
+    
+              <li><a href="/LiquorList/listwhisky" class="btn-border">　whisky　</a></li>
+              <li><a href="/LiquorList/listrum" class="btn-border">　rum　</a></li>
+              <li><a href="/LiquorList/listgin" class="btn-border">　gin　</a></li>
+              <li><a href="/LiquorList/listbrandy" class="btn-border">　brandy　</a></li>
+    
+            </ul>
+          </nav>
           
-            <form action="/LiquorList/search" method="post">
-                <h1></h1>
-                  <input type="text" id="name" name="name" th:value="${name}">
-                  <button type="submit">検索</button></form>
+    
     
     
         </div>
