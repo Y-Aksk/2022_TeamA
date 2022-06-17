@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>LiquorShop</title>
+        <link rel="stylesheet" type="text/css" href="../CSS/cart.css">
+		
+	</head>
+
+<body>
+    <h2 th:text="${page.title}">購入履歴</h2>
+        
+
+    <table>
+        <tr th:each="item : ${page.list}">      
+            <td th:hidden ="${item.customer_id}"></td>
+            <td>
+                <a  th:href = "@{'/LiquorList/detail/{id}'(id=${item.product_id})}" href="#">
+                <img th:src="${item.product_image}" width="150" height="150">
+                </a>
+            </td>
+            <td>
+                <a  th:href = "@{'/LiquorList/detail/{id}'(id=${item.product_id})}" href="#">
+                <span th:text = "${item.product_name}" >名前</span>   
+                </a>
+            </td>
+
+            <td th:text = "${item.product_price}" >価格</td>
+            <td>円</td>
+     
+        </tr>
+    </table>
+
+    
+</body>
+</html>

@@ -10,36 +10,33 @@
     <header id="header">
         <div class="wrapper">
           <p class="logo"><a href="/LiquorList/top"><img src="/image/unnamed.jpg" width="300" height="80"></a></p>
-    
+      
           <nav>
             <ul>
               <li><form action="/LiquorList/search" method="post">
                   <input type="text" id="name" name="name" th:value="${name}">
                   <button type="submit">検索</button></form></li>
-    
+      
               <li><a href="/LiquorList/list">商品一覧</a></li>
               <li><a href="/LiquorList/cart"><img src="/image/カート.png" width="30" height="30"></a></li>
               <li><a href="/LiquorList/favorite"><img src="/image/お気に入り.png" width="30" height="30"></a></li>
-              <li><a href="#"><img src="/image/my.png " width="30" height="30"></a></li>
-              <li><a href="#">ログイン</a></li>
+              <li><a href="/LiquorList/myPageDisplay"><img src="/image/my.png " width="30" height="30"></a></li>
+              <li><a href="/LiquorList/loginDisplay">ログイン</a></li>
             </ul>
           </nav>
-     
+      
           <nav class="liquor">
             <ul>
-    
+      
               <li><a href="/LiquorList/listwhisky" class="btn-border">　whisky　</a></li>
               <li><a href="/LiquorList/listrum" class="btn-border">　rum　</a></li>
               <li><a href="/LiquorList/listgin" class="btn-border">　gin　</a></li>
               <li><a href="/LiquorList/listbrandy" class="btn-border">　brandy　</a></li>
-    
+      
             </ul>
           </nav>
-          
-    
-    
-    
-        </div>
+          </div>
+      
       </header>
     <body>
         <table align="center">
@@ -50,24 +47,21 @@
                     <img th:src="${page.product_image}" width="300" height="300">
                 </td> 
                 <table align="center">
-                    <td th:text="${page.product_name}">名前</td>
+                    <td class="name" th:text="${page.product_name}">名前</td>
               
-                    <td th:text="${page.abv}">度数</td>
-                    <td>%</td>
-                    <td th:text="${page.volume}">量</td> 
-                    <td>㎖</td> 
+                    <td class="strong" th:text="${page.abv}">度数</td>
+                    <td class="strong">%</td>
+                    <td class="ml" th:text="${page.volume}">量</td> 
+                    <td class="ml">㎖　</td> 
                 </table>
                 <table align="center">
-                    <td th:text="${page.product_price}">値段</td>
-                    <td>円</td>
+                   
+                    <td class="price" th:text="${page.product_price}">値段</td>
+                    <td class="price">円</td>
+                   
                 </table>
-                <table align="center"> <td th:text="${page.product_detail}">詳細</td> </table>
-
-               
-                
-               
-               
-                
+                <table align="center"> <td class="detail" th:text="${page.product_detail}">詳細</td> </table>
+ 
             </tr> 
         </table> 
         <table align="center">
@@ -79,10 +73,10 @@
                 <td><a th:href ="@{'/LiquorList/insertfavorite/{id}'(id=${page.product_id})}">
                     <button type="submit">お気に入り</button>
                 </a></td>
-    
-                <td><form action="/LiquorList/history" method="post">
+
+                <td><a th:href ="@{'/LiquorList/inserthistory/{id}'(id=${page.product_id})}">
                     <button type="submit">購入</button>
-                </form></td>
+                </a></td> 
         </table>
             
     </body>

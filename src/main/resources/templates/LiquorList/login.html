@@ -4,7 +4,17 @@
             <title>ログイン画面</title>
             <meta charset="UTF-8">
             <link rel="stylesheet" type="text/css" href="/CSS/forLogin.css">
+            <link rel="stylesheet" type="text/css" href="/CSS/list.css">
+            
         </head>
+
+        <header id="header">
+            <div class="wrapper">
+              <p class="logo"><a href="/LiquorList/top"><img src="/image/unnamed.jpg" width="300" height="80"></a></p>
+              <p class="back"><img src="/image/top/S__97452034.jpeg" width="1000" height="200"></p>
+            </div>
+          </header>
+        
         <body>
             <h1>ログイン画面</h1>
             <p>メールアドレスとパスワードを入力してください。</p>
@@ -29,6 +39,17 @@
             <p><a th:href="@{'/LiquorList/addCustomerDisplay'}">アカウントをお持ちでない方はこちら</a></p>
             <p><a th:href="@{'/LiquorList/topForTest'}">トップへ戻る</a></p>
         </body>
+        <footer class="login">
+            <div>
+              <h1>
+                <a href="top">SOL-liquor</a>
+              </h1>
+          
+              <div>
+                <small>Copyright &copy; 2022 SOL-liquor　｜ All rights reserved.</small>
+              </div>
+            </div>
+          </footer>
     </html>
 </DOCTYPE>
     

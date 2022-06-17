@@ -150,8 +150,9 @@ public class LiquorController {
     @GetMapping("insertcart/{id}")
         public String insertcart(@ModelAttribute LiquorPageModel page, @PathVariable("id") int id, Model model) {
         //更新データをパラメータに設定
+        int customer_id=(int)session.getAttribute("customer_id");
         int price = liquorMapper.findprice(id);
-        liquorMapper.insertcart(id, price, page.count);
+        liquorMapper.insertcart(customer_id, id, price, page.count);
         //更新後データを取得
         page.list = liquorMapper.findall();
         //モデルページインスタンスを設定
@@ -161,39 +162,37 @@ public class LiquorController {
 
     }
         //お気に入りボタン
-    @GetMapping("insertfavorite")
-        public String insertfavorite(@ModelAttribute LiquorPageModel page, Model model) {
+    @GetMapping("insertfavorite/{id}")
+        public String insertfavorite(@ModelAttribute LiquorPageModel page,@PathVariable("id") int id, Model model) {
 
         int customer_id=(int)session.getAttribute("customer_id");
         //更新データをパラメータに設定
-        liquorMapper.insertfavorite(page.product_id, customer_id);
+        liquorMapper.insertfavorite(id, customer_id);
         //更新後データを取得
-        // page.list2 = favoriteMapper.findFavo(id);
         page.list = liquorMapper.findall();
         //モデルページインスタンスを設定
         model.addAttribute("page", page);
         //テンプレートファイルをを指定
-        return "LiquorList/favorite";
+        return "LiquorList/list";
 
     }
+    
 
-    
-    //     //履歴ボタン
-    // @PostMapping("insertfavorite")
-    // public String list(@ModelAttribute LiquorPageModel page, Model model){
-    //     //タイトルを設定
-    //     page.title = "顧客一覧表示(Java)";
-    //     //画面で入力した更新データをパラメータに設定
-    //     liquorMapper.insertfavorite(page.product_id);
-    //     //更新後データを取得
-    //     page.list = liquorMapper.findfavorite();
-    //     //モデルページインスタンスを設定
-    //     model.addAttribute("page", page);
-    //     //テンプレートファイルをを指定
-    //     return "LiquorList/favorit";
-    
-    // }
-    
+//             //購入ボタン処理
+//     @GetMapping("inserthistory/{id}")
+//     public String inserthistory(@ModelAttribute LiquorPageModel page,@PathVariable("id") int id, Model model) {
+
+//     int customer_id=(int)session.getAttribute("customer_id");
+//     //更新データをパラメータに設定
+//     liquorMapper.inserthistory(customer_id, id);
+//     //更新後データを取得
+//     page.list = liquorMapper.findall();
+//     //モデルページインスタンスを設定
+//     model.addAttribute("page", page);
+//     //テンプレートファイルをを指定
+//     return "LiquorList/list";
+
+// }
 
 
 }

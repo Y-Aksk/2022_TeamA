@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>LiquorShop</title>
+        <link rel="stylesheet" type="text/css" href="../CSS/cart.css">
+		
+	</head>
+
+<body>
+    <title>購入完了</title>
+
+    <div class="txnk">
+        <p>ご購入いただきありがとうございます！</p>
+    </div> 
+
+    <div class="top">   
+        <a th:href = "@{'/LiquorList/deletecomp/{id}'(id=${page.product_id})}" href="#"> 
+            サイトトップへ　
+        </a>
+    </div>
+    
+</body>
+</html>

@@ -34,6 +34,7 @@ public interface LiquorMapper {
     //カート
     @Insert("insert into cart (customer_id, product_id, count, product_price) VAlUES(#{customer_id}, #{product_id}, 1, #{product_price})")
     public void insertcart(
+        @Param("customer_id")int customer_id,
         @Param("product_id")int product_id,
         @Param("product_price")int product_price,
         @Param("count") int count
@@ -49,6 +50,13 @@ public interface LiquorMapper {
          @Param("customer_id")int customer_id
 
      );
+
+     @Insert("insert into history(customer_id, product_id) VALUES(#{customer_id}, #{product_id})")
+     public void inserthistory(
+         @Param("customer_id")int customer_id,
+          @Param("product_id")int product_id
+          
+      );
 
      
 }

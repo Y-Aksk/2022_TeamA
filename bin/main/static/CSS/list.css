@@ -63,6 +63,25 @@ a.btn-border:hover {
     margin-right: auto;
 }
 
+.wrapper {
+  position: relative;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  
+  position: absolute;
+  top: 3%;
+  left: 1%;
+}
+
+
+
+
+
 footer{
 
   width: 100%;
@@ -76,6 +95,25 @@ footer{
   position: absolute;/*←絶対位置*/
   bottom: 0; /*下に固定*/
   margin-bottom: -800px;
+}
+.login{
+  margin-bottom: -450px;
+}
+
+.name{
+  font-size: 120%;
+}
+.price{
+  font-size: 140%;
+}
+.ml{
+  font-size: 80%;
+}
+.strong{
+  font-size: 80%;
+}
+.detail{
+  font-size: 90%;
 }
 
 
@@ -93,21 +131,38 @@ footer{
 /*　背景画像設定　*/
 
 .slider-item01 {
-    background:url(../image/top/IMG_5263.jpeg);
+    background:url(../image/top/F5A41204-C4E6-462C-95D3-9A8ABB7BDF06.jpeg);
     width: 80;
     height: 80;
 }
 
 .slider-item02 {
-    background:url(../image/top/IMG_5264.jpg);
+    background:url(../image/top/821F0BC9-FE95-4EE0-A3CD-E774B1407681.jpeg);
     width: 80;
     height: 80;
 }
 
 .slider-item03 {
-    background:url(../image/top/IMG_5265.jpg);
+    background:url(../image/top/263E14DA-DC4E-46AC-8DB7-15B318D2E71B.jpeg);
     width: 80;
     height: 80;
+}
+.slider-item04 {
+  background:url(../image/top/3DEFE51E-E2BA-489D-B6A1-B87DE1296865.jpeg);
+  width: 80;
+  height: 80;
+}
+
+.slider-item05 {
+  background:url(../image/top/2A53A951-7089-4F96-86B3-70CF1D567B38.jpeg);
+  width: 80;
+  height: 80;
+}
+
+.slider-item06 {
+  background:url(../image/top/3303DA45-4D42-4027-92B4-DB1BD47775CA.jpeg);
+  width: 80;
+  height: 80;
 }
 
 .slider-item {
