@@ -1,0 +1,93 @@
+/* 領域の設定 */
+html{
+	height:100%;
+}
+body{
+	height:100%;
+}
+
+h2{
+	margin-left: 10%;
+}
+#wrapper{
+	height:100%;
+}
+
+/* ギャラリー設定 */
+#gallery{
+	list-style:none; /*箇条書きの・を削除*/
+	overflow:hidden;
+	padding-left:0;
+}
+#gallery li{
+	float: left; 
+	width: calc(90%/4); /*リスト幅をビューポートの1/3で設定*/
+	line-height: 50%;/*行間をなくす⇒上下を詰める*/
+}
+#gallery img{
+	display: block; /*imgタグの初期値はinline⇒blockで幅指定を出来るように*/
+	width: 90%;    /*親要素liの幅：calc(100%/3)に合わせる*/
+	height:auto;
+}
+
+.center{
+	position: relative; /* 今の位置を基準 */
+	top: 10px; /* 上から10px */
+	margin-left: 10%; /* 左から20px */
+}
+
+.totalPrice{
+	margin-left: 80%;
+
+}
+
+.btnspinner{
+    -ms-user-select: none;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.spinner_area input{
+    padding: 11px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 18px;
+    width: auto;
+    vertical-align: middle;
+    /* デフォルトのスピナーを消す */
+    -webkit-appearance: none;
+    -moz-appearance:textfield;
+}
+
+.spinner_area input[type="button"]{
+    cursor: pointer;
+}
+
+/*テーブル*/
+/* table.row{
+
+  width:100%;
+
+  display:block;
+
+  text-align: center;
+ 
+} */
+
+table.row th,
+table.row td{
+
+  width:100%;
+
+  display:block;
+
+}
+
+th,td {
+    padding: 5px;      /* 余白指定 */
+    display:block;
+       
+}
+
