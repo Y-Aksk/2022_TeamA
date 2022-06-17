@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>新規登録画面</title>
+            <meta charset="UTF-8">
+            <link rel="stylesheet" type="text/css" href="/CSS/forLogin.css">
+        </head>
+        <body>
+            <h1>新規登録</h1>
+            <p>必要事項を入力してください。</p>
+            <p>※空白は入力しないでください。</p>
+            <p class="error" th:text="${massage}"></p>
+            <form action="/LiquorList/addCustomer" th:action="@{'/LiquorList/addCustomer'}" method="post">
+                <table border="1">
+                        <tr>
+                            <td><p>名前　　　　　　　<input type="text" name="customer_name" placeholder="酒豪太郎"></p></td>
+                        </tr>
+                        <tr>
+                            <td><p>メールアドレス　　<input type="mailaddress" name="mailaddress" placeholder="sample@example.jp"></p></td>
+                        </tr>
+                        <tr>
+                            <td><p>パスワード　　　　<input type="password" name="password" placeholder="example2022" ></p></td>
+                        </tr>
+                        <tr>
+                            <td><p>パスワード再入力　<input type="password" name="password2" placeholder="example2022" ></p></td>
+                        </tr>
+                </table>
+                <p><button type="submit">登録</button></p>
+            </form>
+
+            <p><a th:href="@{'/LiquorList/loginDisplay'}">アカウントをお持ちの方はこちら</a></p>
+            <p><a th:href="@{'/LiquorList/topForTest'}">トップへ戻る</a></p>
+        </body>
+    </html>
+
+    
+    
