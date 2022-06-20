@@ -24070,3 +24070,52 @@ org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property o
 2022-06-17 17:01:18.069  INFO 18044 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2022-06-17 17:01:18.070  INFO 18044 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2022-06-17 17:01:18.071  INFO 18044 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-06-17 17:06:57.795  INFO 17488 --- [restartedMain] com.example.demo.LiquorApplication       : Starting LiquorApplication using Java 17.0.3 on S2200062 with PID 17488 (C:\git\group\teamA\bin\main started by 2939 in c:\git\group\teamA)
+2022-06-17 17:06:57.796  INFO 17488 --- [restartedMain] com.example.demo.LiquorApplication       : No active profile set, falling back to 1 default profile: "default"
+2022-06-17 17:06:57.847  INFO 17488 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-06-17 17:06:57.847  INFO 17488 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-06-17 17:06:58.870  INFO 17488 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-06-17 17:06:58.881  INFO 17488 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-17 17:06:58.881  INFO 17488 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-06-17 17:06:58.946  INFO 17488 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-17 17:06:58.947  INFO 17488 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1099 ms
+2022-06-17 17:06:59.528  INFO 17488 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-06-17 17:06:59.570  INFO 17488 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-17 17:06:59.578  INFO 17488 --- [restartedMain] com.example.demo.LiquorApplication       : Started LiquorApplication in 2.062 seconds (JVM running for 2.636)
+2022-06-17 17:07:04.706  INFO 17488 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-17 17:07:04.706  INFO 17488 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-17 17:07:04.707  INFO 17488 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-06-17 17:07:04.746  INFO 17488 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-17 17:07:04.925  INFO 17488 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-17 17:12:25.652  INFO 11104 --- [restartedMain] com.example.demo.LiquorApplication       : Starting LiquorApplication using Java 17.0.3 on S2200062 with PID 11104 (C:\git\group\teamA\bin\main started by 2939 in c:\git\group\teamA)
+2022-06-17 17:12:25.654  INFO 11104 --- [restartedMain] com.example.demo.LiquorApplication       : No active profile set, falling back to 1 default profile: "default"
+2022-06-17 17:12:25.741  INFO 11104 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-06-17 17:12:25.741  INFO 11104 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-06-17 17:12:26.773  INFO 11104 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-06-17 17:12:26.783  INFO 11104 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-17 17:12:26.783  INFO 11104 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-06-17 17:12:26.847  INFO 11104 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-17 17:12:26.848  INFO 11104 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1106 ms
+2022-06-17 17:12:27.471  INFO 11104 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-06-17 17:12:27.516  INFO 11104 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-17 17:12:27.525  INFO 11104 --- [restartedMain] com.example.demo.LiquorApplication       : Started LiquorApplication in 2.159 seconds (JVM running for 2.739)
+2022-06-17 17:12:31.628  INFO 11104 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-17 17:12:31.628  INFO 11104 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-17 17:12:31.629  INFO 11104 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-06-17 17:20:14.331  INFO 18688 --- [restartedMain] com.example.demo.LiquorApplication       : Starting LiquorApplication using Java 17.0.3 on S2200062 with PID 18688 (C:\git\group\teamA\bin\main started by 2939 in c:\git\group\teamA)
+2022-06-17 17:20:14.332  INFO 18688 --- [restartedMain] com.example.demo.LiquorApplication       : No active profile set, falling back to 1 default profile: "default"
+2022-06-17 17:20:14.396  INFO 18688 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-06-17 17:20:14.396  INFO 18688 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-06-17 17:20:15.468  INFO 18688 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-06-17 17:20:15.488  INFO 18688 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-17 17:20:15.488  INFO 18688 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-06-17 17:20:15.541  INFO 18688 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-17 17:20:15.541  INFO 18688 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1145 ms
+2022-06-17 17:20:16.160  INFO 18688 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-06-17 17:20:16.210  INFO 18688 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-17 17:20:16.221  INFO 18688 --- [restartedMain] com.example.demo.LiquorApplication       : Started LiquorApplication in 2.176 seconds (JVM running for 2.774)
+2022-06-17 17:20:17.698  INFO 18688 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-17 17:20:17.698  INFO 18688 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-17 17:20:17.699  INFO 18688 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2022-06-17 17:20:26.346  INFO 18688 --- [http-nio-8080-exec-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-17 17:20:26.604  INFO 18688 --- [http-nio-8080-exec-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
