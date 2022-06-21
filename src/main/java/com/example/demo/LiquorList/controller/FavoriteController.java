@@ -43,9 +43,6 @@ public class FavoriteController {
         //session.setAttribute("customer_id",id);
         int customer_id=(int)session.getAttribute("customer_id");
 
-
-        page.title = "お気に入り";
-
         //モデルにページインスタンスを作成
         model.addAttribute("page",page);
         //更新後のデータを取得
@@ -69,7 +66,6 @@ public class FavoriteController {
     //セッション呼び出し
     int customer_id = (int) session.getAttribute("customer_id"); 
 
-    page.title = "お気に入り";
 
     //IDをキーにデータ削除
     favoriteMapper.deletefavorite(productId);

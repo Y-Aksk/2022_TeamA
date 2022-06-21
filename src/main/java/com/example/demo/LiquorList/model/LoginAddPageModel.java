@@ -8,9 +8,13 @@ public class LoginAddPageModel {
     public List<LoginAddModel> list;
     public int customer_id;
     public String customer_name;
+    public String new_customer_name;
     public String mailaddress;
+    public String new_mailaddress;
     public String password;
     public String password2;
+    public String new_password;
+    public String new_password2;
     public String add_user;
     public String change_user;
 
@@ -28,11 +32,25 @@ public class LoginAddPageModel {
         this.customer_name=customer_name;
     }
 
+    public String getNew_customer_name(){
+        return new_customer_name;
+    }
+    public void setNew_customer_name(String new_customer_name){
+        this.new_customer_name=new_customer_name;
+    }
+
     public String getMailaddress(){
         return mailaddress;
     }
     public void setMailaddress(String mailaddress){
         this.mailaddress=mailaddress;
+    }
+
+    public String getNew_mailaddress(){
+        return new_mailaddress;
+    }
+    public void setNew_mailaddress(String new_mailaddress){
+        this.new_mailaddress=new_mailaddress;
     }
 
     public String getPassword(){
@@ -47,6 +65,20 @@ public class LoginAddPageModel {
     }
     public void setPassword2(String password2){
         this.password2=password2;
+    }
+
+    public String getNew_password2(){
+        return new_password2;
+    }
+    public void setNew_password2(String new_password2){
+        this.new_password2=new_password2;
+    }
+
+    public String getNew_password(){
+        return new_password;
+    }
+    public void setNew_password(String new_password){
+        this.new_password=new_password;
     }
 
     public String getAdd_user(){

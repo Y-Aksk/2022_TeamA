@@ -46,6 +46,7 @@ body {
 }
 a.btn-border {
   border: 2px solid #000;
+  color:black;
   border-radius: 0;
   background: #fff;
   text-decoration: none;
@@ -53,6 +54,7 @@ a.btn-border {
 a.btn-border:hover {
   color: #fff;
   background: #000;
+
 }
 
 #header ul li:last-child {
@@ -65,6 +67,7 @@ a.btn-border:hover {
 
 .wrapper {
   position: relative;
+
 }
 
 .logo {
@@ -72,10 +75,36 @@ a.btn-border:hover {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  
+  z-index: 1;
   position: absolute;
   top: 3%;
   left: 1%;
+}
+button{
+  background-color:#fff;
+  border: 0;
+  
+}
+.img_02 {
+  position: absolute;
+  margin-top: 0px; /* 上方向にネガティブマージンを取る */
+  opacity: .4;        /*※解説用にかぶっているところをわかりやすくしているだけ*/
+}
+
+.btn-flat-simple {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  padding: 0.25em 0.5em;
+  text-decoration: none;
+  color:saddlebrown;
+  background: #ECECEC;
+  transition: .4s;
+}
+
+.btn-flat-simple:hover {
+  background:darkred;
+  color: white;
 }
 
 
@@ -105,6 +134,7 @@ footer{
 }
 .price{
   font-size: 140%;
+  text-align: right;
 }
 .ml{
   font-size: 80%;
@@ -115,6 +145,26 @@ footer{
 .detail{
   font-size: 90%;
 }
+.total{
+  font-size: 160%;
+  font-family: sans-serif;
+}
+.name{
+  font-size: 60%;
+}
+
+.total_price{
+  margin-left: auto;
+  margin-right: 50px;
+  font-family: "ヒラギノ角ゴ ProN W3";
+}
+
+.total_botton{
+  margin-left: auto;
+  margin-right: 50px;
+}
+qgw-ozco-znb
+
 
 
 
@@ -132,37 +182,37 @@ footer{
 
 .slider-item01 {
     background:url(../image/top/F5A41204-C4E6-462C-95D3-9A8ABB7BDF06.jpeg);
-    width: 80;
-    height: 80;
+    width: 50;
+    height: 50;
 }
 
 .slider-item02 {
     background:url(../image/top/821F0BC9-FE95-4EE0-A3CD-E774B1407681.jpeg);
-    width: 80;
-    height: 80;
+    width: 50;
+    height: 50;
 }
 
 .slider-item03 {
     background:url(../image/top/263E14DA-DC4E-46AC-8DB7-15B318D2E71B.jpeg);
-    width: 80;
-    height: 80;
+    width: 50;
+    height: 50;
 }
 .slider-item04 {
   background:url(../image/top/3DEFE51E-E2BA-489D-B6A1-B87DE1296865.jpeg);
-  width: 80;
-  height: 80;
+  width: 50;
+  height: 50;
 }
 
 .slider-item05 {
   background:url(../image/top/2A53A951-7089-4F96-86B3-70CF1D567B38.jpeg);
-  width: 80;
-  height: 80;
+  width: 50;
+  height: 50;
 }
 
 .slider-item06 {
   background:url(../image/top/3303DA45-4D42-4027-92B4-DB1BD47775CA.jpeg);
-  width: 80;
-  height: 80;
+  width: 50;
+  height: 50;
 }
 
 .slider-item {

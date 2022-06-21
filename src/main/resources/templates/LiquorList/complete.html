@@ -5,22 +5,34 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<title>LiquorShop</title>
-        <link rel="stylesheet" type="text/css" href="../CSS/cart.css">
+        <link rel="stylesheet" type="text/css" href="/CSS/list.css">
 		
 	</head>
+
 
 <body>
     <title>購入完了</title>
 
-    <div class="txnk">
+    <div align="center">
         <p>ご購入いただきありがとうございます！</p>
     </div> 
 
-    <div class="top">   
+    <div align="center">   
         <a th:href = "@{'/LiquorList/deletecomp/{id}'(id=${page.product_id})}" href="#"> 
             サイトトップへ　
         </a>
     </div>
     
 </body>
+<footer class="login">
+    <div>
+      <h1>
+        <a href="top">SOL-liquor</a>
+      </h1>
+  
+      <div>
+        <small>Copyright &copy; 2022 SOL-liquor　｜ All rights reserved.</small>
+      </div>
+    </div>
+  </footer>
 </html>

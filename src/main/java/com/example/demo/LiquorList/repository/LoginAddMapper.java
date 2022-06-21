@@ -25,4 +25,14 @@ public interface LoginAddMapper {
             @Param("mailaddress") String mailaddress,
             @Param("password") String password
     );
+
+    @Update("update customer set customer_name=#{new_customer_name},mailaddress=#{new_mailaddress},password=#{new_password},change_user=#{new_customer_name} where customer_id=#{customer_id}")
+    public void edit(
+        @Param("customer_id")int customer_id,
+        @Param("new_customer_name")String new_customer_name,
+        @Param("new_mailaddress")String new_mailaddress,
+        @Param("new_password")String new_password
+    );
+
+    
 }

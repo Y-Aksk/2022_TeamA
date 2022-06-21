@@ -1,0 +1,65 @@
+<DOCTYPE html>
+    <html>
+        <head>
+            <title>登録情報変更</title>
+            <meta charset="UTF-8">
+            <link rel="stylesheet" type="text/css" href="/CSS/forLogin.css">
+            <body>
+                <h1>登録情報変更</h1>
+                <p>現在登録されている情報</p>
+                <table border="1">
+                    <tr>
+                        <td><p>会員ID</p></td>
+                        <td th:text="${customer_id}">会員IDの表示エラー</td>
+                    </tr>
+                    <tr>
+                        <td><p>名前</p></td>
+                        <td th:text="${customer_name}">名前の表示エラー</td>
+                    </tr>
+                    <tr>
+                        <td><p>メールアドレス</p></td>
+                        <td th:text="${mailaddress}">メールアドレスの表示エラー</td></td>
+                    </tr>
+                </table>
+                <p>変更内容を入力してください</p>
+                <p class="error" th:text="${massage}"></p>
+                <form action="/LiquorList/edit" th:action="@{'/LiquorList/edit'}" method="post">
+                    <table border="1">
+                        <tr>
+                            <td>
+                                <p>名前　　　　　　　　　　<input type="customer_name" name="new_customer_name" placeholder="酒豪太郎"></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>メールアドレス　　　　　<input type="mailaddress" name="new_mailaddress" placeholder="sample@example.jp"></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>現在のパスワード　　　　<input type="password" name="password" placeholder="example2022"></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>新しいパスワード　　　　<input type="password" name="new_password" placeholder="newpass00"></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>新しいパスワード再入力　<input type="password" name="new_password2" placeholder="newpass00"></p>
+                            </td>
+                        </tr>
+                    </table>
+              
+                    <p><input type="submit" name="botton" value="変更保存"></p>
+                </form>
+                <p>
+                    <p><a th:href="@{'/LiquorList/myPageDisplay'}">変更せずに戻る</a></p>
+                </p>
+            </body>
+        </head>
+    </html>
+    
+    
+    

@@ -5,15 +5,37 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<title>LiquorShop</title>
-        <link rel="stylesheet" type="text/css" href="../CSS/cart.css">
+        <link rel="stylesheet" type="text/css" href="/CSS/list.css">
 		
 	</head>
+  <header id="header">
+    <div class="img_02"><img src="/image/top/header.jpeg" width="1300" height="150"></div>
+    <div class="wrapper">
+      <p class="logo"><a href="/LiquorList/top"><img src="/image/アイコン６.png" width="300" height="80"></a></p>
+  
+      <nav>
+        <ul>
+          <li></li>
+  
+          <li><a href="/LiquorList/list">商品一覧</a></li>
+          <li><a href="/LiquorList/cart"><img src="/image/カート.png" width="30" height="30"></a></li>
+          <li><a href="/LiquorList/favorite"><img src="/image/お気に入り.png" width="30" height="30"></a></li>
+          <li><a href="/LiquorList/myPageDisplay"><img src="/image/my.png " width="30" height="30"></a></li>
+          <li><a href="/LiquorList/loginDisplay">ログイン</a></li>
+        </ul>
+      </nav>
+  
+
+      </div>
+    </header>
 
 <body>
-    <h2 th:text="${page.title}">購入履歴</h2>
+  <h1>　</h1>
+    <h2 align="center">---- history ----</h2>
         
 
     <table>
+      <td>
         <tr th:each="item : ${page.list}">      
             <td th:hidden ="${item.customer_id}"></td>
             <td>
@@ -31,6 +53,7 @@
             <td>円</td>
      
         </tr>
+      </td>
     </table>
 
     

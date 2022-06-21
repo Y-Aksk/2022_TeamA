@@ -41,6 +41,7 @@ public class LoginAddFilter implements Filter {
         urls.add("^/LiquorList/search");
 
         //開発のために一時的にオープンするページ
+        // urls.add("^/LiquorList/myPage");
         // urls.add("^/LiquorList/myPageDisplay");
 
         //テスト用のトップページです
@@ -73,7 +74,7 @@ public class LoginAddFilter implements Filter {
                 } else if (checkURL(url)) {
                     chain.doFilter(request, response);
                 //フィルターをかけない拡張子の指定
-                } else if (url.matches(".+\\.(css|png|jpg)")) {
+                } else if (url.matches(".+\\.(css|png|jpg|jpeg)")) {
                     chain.doFilter(request, response);
                 } else {
                     HttpSession session = request.getSession(false);

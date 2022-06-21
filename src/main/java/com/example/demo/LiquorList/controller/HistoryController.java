@@ -1,5 +1,7 @@
 package com.example.demo.LiquorList.controller;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,13 +29,16 @@ public class HistoryController {
     HttpSession session; 
 
     @GetMapping("history")
-    public String history(Model model){
+    public String history(HttpServletRequest request, HttpServletResponse response,  Model model){
 
         //ページクラスをNewしてタイトルをセット
         HistoryPageModel page = new HistoryPageModel();
-        page.title = "購入履歴";
+      
 
-        int customer_id = (int) session.getAttribute("customer_id");
+        //セッションオブジェクトの生成
+        HttpSession session = request.getSession();
+
+        int customer_id=(int)session.getAttribute("customer_id");
 
         //モデルにページインスタンスを作成
         model.addAttribute("page",page);

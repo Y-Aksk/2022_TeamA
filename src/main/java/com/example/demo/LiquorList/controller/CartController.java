@@ -42,8 +42,6 @@ public class CartController {
         //セッションの中にid（customer_idという名前の）←実際はログイン時にやってあるため呼び出しのみでいい
         int customer_id=(int)session.getAttribute("customer_id");
 
-        page.title = "買い物かご";
-
         //モデルにページインスタンスを作成
         model.addAttribute("page",page);
         model.addAttribute("sum",sum);
@@ -68,21 +66,23 @@ public class CartController {
     
     //ページインスタンスを作って、タイトルを設定
     CartPageModel page = new CartPageModel();
+    CartPageModel sum = new CartPageModel();
 
     //セッション呼び出し
     int customer_id = (int) session.getAttribute("customer_id");
 
-
-    page.title = "買い物かご";
 
     //IDをキーにデータ削除
     cartMapper.deletecart(productId);
 
     //リストを初期化
     page.list = cartMapper.findCartId(customer_id);
+    sum.list = cartMapper.findSum(customer_id);
 
     //
     model.addAttribute("page", page);
+    model.addAttribute("sum",sum);
+
 
     return "LiquorList/cart"; //テンプレートファイルを指定
     }
@@ -95,15 +95,16 @@ public class CartController {
     public String update(@ModelAttribute CartPageModel page ,@PathVariable("productId") int productId, Model model){
         //セッション呼び出し
         int customer_id = (int) session.getAttribute("customer_id");
+        CartPageModel sum = new CartPageModel();
 
-        //タイトルを設定
-        page.title = "顧客一覧画面(Java)";
         //画面で入力したデータをパラメータに設定
         cartMapper.update(productId,page.count);
         //更新後のデータを取得
         page.list = cartMapper.findCartId(customer_id);
+        sum.list = cartMapper.findSum(customer_id);
         //モデルページにインスタンスを設定
         model.addAttribute("page", page);
+        model.addAttribute("sum",sum);
 
         return "LiquorList/cart"; //テンプレートファイルを指定
 
@@ -115,14 +116,16 @@ public class CartController {
 
         //ページクラスをNewしてタイトルをセット
         CartPageModel page = new CartPageModel();
+        CartPageModel sum = new CartPageModel();
+
 
         //セッションの中にid（customer_idという名前の）←実際はログイン時にやってあるため呼び出しのみでいい
         session.setAttribute("customer_id",id);
 
-        page.title = "買い物かご";
-
         //モデルにページインスタンスを作成
         model.addAttribute("page",page);
+        model.addAttribute("sum",sum);
+    
 
         //更新後のデータを取得
         //page.list = cartMapper.findCartId(id);
@@ -134,11 +137,13 @@ public class CartController {
     //購入ボタン処理
     @GetMapping("inserthistory/{id}")
         public String inserthistory(@ModelAttribute CartPageModel page,@PathVariable("id") int id, Model model) {
-            
+        CartPageModel sum = new CartPageModel();
+
 
         int customer_id = (int)session.getAttribute("customer_id");
 
         page.list = cartMapper.findCartId(customer_id);
+        sum.list = cartMapper.findSum(customer_id);
         //更新データをパラメータに設定
         //cartMapper.inserthistory(id,customer_id);
 
@@ -151,6 +156,8 @@ public class CartController {
 
         //モデルページインスタンスを設定
         model.addAttribute("page", page);
+        model.addAttribute("sum",sum);
+    
         //テンプレートファイルをを指定
         return "LiquorList/complete";
 
@@ -164,18 +171,20 @@ public class CartController {
     
     //ページインスタンスを作って、タイトルを設定
     CartPageModel page = new CartPageModel();
+    CartPageModel sum = new CartPageModel();
+
 
     //セッション呼び出し
     int customer_id = (int) session.getAttribute("customer_id");
 
 
-    page.title = "買い物かご";
 
     //IDをキーにデータ削除
     cartMapper.deletecomp(customer_id);
 
     //
     model.addAttribute("page", page);
+    model.addAttribute("sum",sum);
 
     return "LiquorList/top"; //テンプレートファイルを指定
     }

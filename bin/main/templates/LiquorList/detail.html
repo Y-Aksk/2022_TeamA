@@ -15,7 +15,7 @@
             <ul>
               <li><form action="/LiquorList/search" method="post">
                   <input type="text" id="name" name="name" th:value="${name}">
-                  <button type="submit">検索</button></form></li>
+                  <button type="submit"><img src="/image/search.png" width="10" height="10"></button></form></li>
       
               <li><a href="/LiquorList/list">商品一覧</a></li>
               <li><a href="/LiquorList/cart"><img src="/image/カート.png" width="30" height="30"></a></li>
@@ -65,18 +65,18 @@
             </tr> 
         </table> 
         <table align="center">
- 
-                <td><a th:href ="@{'/LiquorList/insertcart/{id}'(id=${page.product_id})}">
-                    <button type="submit">カートに入れる</button>
-                </a></td>
-    
-                <td><a th:href ="@{'/LiquorList/insertfavorite/{id}'(id=${page.product_id})}">
-                    <button type="submit">お気に入り</button>
-                </a></td>
+            <td><a th:href ="@{'/LiquorList/insertcart/{id}'(id=${page.product_id})}">
+                <button type="submit"><img src="/image/button/スライド2.jpg" width="60" height="30"></button>
+            </a></td>
 
-                <td><a th:href ="@{'/LiquorList/inserthistory/{id}'(id=${page.product_id})}">
-                    <button type="submit">購入</button>
-                </a></td> 
+            <td><a th:href ="@{'/LiquorList/insertfavorite/{id}'(id=${page.product_id})}">
+                <button type="submit"><img src="/image/button/スライド3.jpg" width="60" height="30"></button>
+            </a></td>
+
+            <td><a th:href ="@{'/LiquorList/inserthistory/{id}'(id=${page.product_id})}">
+                <button type="submit"><img src="/image/button/スライド1.jpg" width="60" height="30"></button>
+            </a></td>
+                
         </table>
             
     </body>

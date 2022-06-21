@@ -4,6 +4,27 @@
             <title>新規登録画面</title>
             <meta charset="UTF-8">
             <link rel="stylesheet" type="text/css" href="/CSS/forLogin.css">
+            <script>
+                var max=4;
+                var min=1;
+                var n = Math.floor( Math.random() * (max + 1 - min) ) + min ;
+        
+                function ShowImage(){
+                if (n==1) {
+                document.getElementById("gazo").src="/image/security/c01.png";
+                document.getElementById("gazo").alt="c01";
+                }else if(n==2){
+                document.getElementById("gazo").src="/image/security/c02.png";
+                document.getElementById("gazo").alt="c02";
+                }else if(n==3){
+                document.getElementById("gazo").src="/image/security/c03.png";
+                document.getElementById("gazo").alt="c03";
+                }else if(n==4){
+                document.getElementById("gazo").src="/image/security/c04.png";
+                document.getElementById("gazo").alt="c04";
+                }
+                }
+            </script>
         </head>
         <body>
             <h1>新規登録</h1>
@@ -28,6 +49,15 @@
                 <p><button type="submit">登録</button></p>
             </form>
 
+            <!-- <img src="/image/security/c01.png"> -->
+            <table border="1">
+                <tr>
+                    <td>
+                    <body onload="ShowImage();"></body>
+                    <img id="gazo" name="gazo" >
+                    </td>
+                </tr>
+            </table>
             <p><a th:href="@{'/LiquorList/loginDisplay'}">アカウントをお持ちの方はこちら</a></p>
             <p><a th:href="@{'/LiquorList/topForTest'}">トップへ戻る</a></p>
         </body>
